@@ -1,0 +1,137 @@
+
+*{
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+}
+html{
+    height: 100%;
+}
+body{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.2rem;
+    min-height: 100%;
+    background-image: url('./fondo.jpg');
+    background-repeat: repeat;
+}
+.grid-container > *{
+    box-shadow: -1px 1px 7px 0px rgba(0,0,0,0.75);
+    border-radius: 4px;
+    padding: 10px;
+    text-align: center;
+}
+.grid-container{
+    display: grid;
+    gap: 10px;
+    grid-template-areas: 
+    "header"
+    "navbar"
+    "main"
+    "sidebar"
+    "footer";
+}
+.header {
+    grid-area: header;
+    background-image: url('./WhatsApp\ Image\ 2022-11-03\ at\ 5.56.34\ PM\ \(4\).jpeg');
+    height: 800px;
+    background-repeat: repeat;
+    background-position: center;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+.imglogo{
+    margin-top: 80px;
+}
+img{
+    width: 350px;
+}
+h1{
+    color: black;
+    text-shadow: 1px;
+}
+.navbar {
+    grid-area: navbar;
+    background-color:white;
+    font-size: 1rem;
+    text-shadow: 2px 2px bisque;
+    display: grid;
+    grid-template-columns:repeat(4,1fr) ;
+    background-image: url('./fondonav.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 600px;
+}
+.imgnav{
+    width: 140px;
+}
+.sidebar {
+    grid-area: sidebar;
+    background-color: rgba(192, 192, 192, 0.822);
+    font-size: 2rem;
+    text-shadow: 2px 2px bisque
+}
+.main {
+    grid-area: main;
+    background-color: rgb(218, 165, 32);
+}
+h2{  color:black;
+    font-size: 2rem;
+    text-shadow: 1px 1px bisque;
+
+}
+.tr1{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color:black;
+    font-size: 2rem;
+    text-shadow: 2px 2px bisque;
+}
+.tr2{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color:black;
+    font-size: 1.5rem;
+    text-shadow: 2px 2px bisque;
+    background-color: silver;
+}
+.tr3{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: black;
+    font-size: 1.5rem;
+    text-shadow: 2px 2px blanchedalmond;
+    background-color: silver;
+}
+.tr4{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: black;
+    font-size: 1.5rem;
+    text-shadow: 2px 2px blanchedalmond;
+    background-color: silver;
+}
+.footer {
+    grid-area: footer;
+    background-color: goldenrod;
+    font-size: 2rem;
+    text-shadow: 2px 2px silver;
+}
+@media(min-width:600px){
+    .grid-container{
+     grid-gap: 20px;
+     grid-template:
+    "header header" 100px
+    "navbar navbar"auto
+    "sidebar main"auto
+    "footer footer"400px
+    200px    auto;
+    overflow-y:scroll;
+    }
+}
+@media(min-width:900px){
+    .grid-container{
+     grid-template:
+     "header header header"100px
+     "navbar main sidebar"auto
+     "footer footer footer"400px
+     150px   auto   200px;
+     overflow-y: scroll;
+    }
+}    
+
